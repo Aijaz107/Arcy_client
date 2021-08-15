@@ -26,7 +26,7 @@ export const Gallery = (props) => {
                 <div className='hover-bg'>
                   {' '}
                   <a
-                    href='/g1'
+                    href='/interior_gallery/g1'
                     title='Project Title'
                     data-lightbox-gallery='gallery1'
                   >
