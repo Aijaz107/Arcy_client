@@ -11,7 +11,7 @@ const App = () => {
     <Router>
       <Switch>
       <Route exact path="/" component={Main} />
-      <Route exact path="/interior_gallery/g1" component={SubGal} />
+      <Route exact path="/g1" component={UpvcGallery} />
       <Route exact path="/interior_gallery" component={InteriorGallery} />
       <Route exact path="/upvc_gallery" component={UpvcGallery} />
       <Route  path="/g2" component={SubGal} />
