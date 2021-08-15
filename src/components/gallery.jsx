@@ -6,7 +6,7 @@ export const Gallery = (props) => {
     fontWeight:"bold",
     margin: "1rem",
     textDecoration: "none",
-    color: 'red',
+    color: 'white',
     fontSize:"2.5rem"
 
   };
@@ -26,12 +26,12 @@ export const Gallery = (props) => {
                 <div className='hover-bg'>
                   {' '}
                   <a
-                    href='/g1'
+                    //href='/g1'
                     title='Project Title'
                     data-lightbox-gallery='gallery1'
                   >
                     <div className='hover-text'>
-                      <Link to="/g1">ELURU</Link>
+                      <Link to="/g1"  style={linkStyle} >ELURU</Link>
        
                     </div>
                     <img
