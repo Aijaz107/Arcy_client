@@ -31,6 +31,7 @@ export const Gallery = (props) => {
                     data-lightbox-gallery='gallery1'
                   >
                     <div className='hover-text'>
+                      <Link to="/g1" style={linkStyle}>View all Projects --{'>'} </Link>
                       <h4>ELURU</h4>
                     </div>
                     <img
