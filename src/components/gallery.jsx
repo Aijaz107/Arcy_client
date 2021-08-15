@@ -6,7 +6,7 @@ export const Gallery = (props) => {
     fontWeight:"bold",
     margin: "1rem",
     textDecoration: "none",
-    color: 'white',
+    color: 'red',
     fontSize:"2.5rem"
 
   };
