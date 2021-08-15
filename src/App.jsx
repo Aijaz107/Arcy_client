@@ -14,14 +14,14 @@ const App = () => {
       <Route exact path="/interior_gallery" component={InteriorGallery} />
       <Route exact path="/upvc_gallery" component={UpvcGallery} />
       <Route exact path="/g1" component={SubGal} />
-      <Route exact path="/g2" component={SubGal} />
-      <Route exact path="/g3" component={SubGal} />
-      <Route exact path="/g4" component={SubGal} />
-      <Route exact path="/g5" component={SubGal} />
-      <Route exact path="/g6" component={SubGal} />
-      <Route exact path="/g7" component={SubGal} />
-      <Route exact path="/g8" component={SubGal} />
-      <Route exact path="/g9" component={SubGal} />
+//       <Route exact path="/g2" component={SubGal} />
+//       <Route exact path="/g3" component={SubGal} />
+//       <Route exact path="/g4" component={SubGal} />
+//       <Route exact path="/g5" component={SubGal} />
+//       <Route exact path="/g6" component={SubGal} />
+//       <Route exact path="/g7" component={SubGal} />
+//       <Route exact path="/g8" component={SubGal} />
+//       <Route exact path="/g9" component={SubGal} />
 
       </Switch>
     </Router>
