@@ -1,6 +1,7 @@
 import { useState } from 'react'
 // import emailjs from 'emailjs-com'
 import axios from 'axios'
+import emailjs from 'emailjs-com';
 
 
 const initialState = {
@@ -19,17 +20,25 @@ export const Contact = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(name, email, message)
+    // console.log(name, email, message)
 
-
-    const dataToSubmit ={
-      name,
-      email,
-      message
-    }
+    emailjs.sendForm('service_vydg3t1', 'template_vls3bby', e.target, 'user_Hk51ckfLdSowWQMG3eAL0')
+    .then((result) => {
+        console.log(result.text);
+    }, (error) => {
+        console.log(error.text);
+    });
+    e.target.reset();
+    alert("mail send")
+    
+    // const dataToSubmit ={
+    //   name,
+    //   email,
+    //   message
+    // }
 
     // axios({
-    //   url:"/abc",
+    //   url:"/mail",
     //   method:'POST',
     //   data:dataToSubmit
     // }).then(()=>{
@@ -38,20 +47,7 @@ export const Contact = (props) => {
     //   console.log(dataToSubmit)
     //   console.log("Error123")
     // })
-
-    // axios.post("api/sendMail",dataToSubmit)
-
-    axios({
-      url:"/mail",
-      method:'POST',
-      data:dataToSubmit
-    }).then(()=>{
-      console.log("sucess")
-    }).catch((er)=>{
-      console.log(dataToSubmit)
-      console.log("Error123")
-    })
-    console.log("llllllllllllllllllllll")
+    // console.log("llllllllllllllllllllll")
   }
   return (
     <div>
@@ -72,8 +68,8 @@ export const Contact = (props) => {
                     <div className='form-group'>
                       <input
                         type='text'
-                        id='name'
-                        name='name'
+                        id='contactName'
+                        name='contactName'
                         className='form-control'
                         placeholder='Name'
                         required
@@ -86,8 +82,8 @@ export const Contact = (props) => {
                     <div className='form-group'>
                       <input
                         type='email'
-                        id='email'
-                        name='email'
+                        id='contactEmail'
+                        name='contactEmail'
                         className='form-control'
                         placeholder='Email'
                         required
@@ -99,14 +95,14 @@ export const Contact = (props) => {
                 </div>
                 <div className='form-group'>
                   <textarea
-                    name='message'
-                    id='message'
+                    name='contactMessage'
+                    id='contactMessage'
                     className='form-control'
                     rows='4'
                     placeholder='Message'
                     required
                     onChange={handleChange}
-                  ></textarea>
+                  ></textarea>  
                   <p className='help-block text-danger'></p>
                 </div>
                 <div id='success'></div>
@@ -181,3 +177,4 @@ export const Contact = (props) => {
     </div>
   )
 }
+
